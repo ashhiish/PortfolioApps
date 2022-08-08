@@ -27,10 +27,10 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Countries"),
+        title: Text("IFSC Finder"),
       ),
-      body: Container(
-        child: Text("hehe"),
+      body: SafeArea(
+        child: Container(),
       ),
     );
   }
