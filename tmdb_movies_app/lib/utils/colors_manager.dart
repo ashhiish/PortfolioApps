@@ -9,3 +9,4 @@ class ColorManager {
   // dark theme colors
 
 }
+  
