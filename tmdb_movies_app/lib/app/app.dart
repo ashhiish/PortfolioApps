@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:tmdb_movies_app/ui/homepage/homepage.dart';
+import 'package:flutter/services.dart';
+import 'package:tmdb_movies_app/ui/onboarding/user_onboarding.dart';
+import 'package:tmdb_movies_app/ui/splash/splash_screen.dart';
 
 // theming
 // routing
@@ -45,29 +47,16 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle.dark.copyWith(statusBarColor: Colors.transparent),
+    );
+
     return MaterialApp(
       home: isInitializationDone
-          ? HomePage()
-          : Scaffold(
-              backgroundColor: Color(0xFFe8e3e3),
-              body: SafeArea(
-                child: Stack(
-                  children: [
-                    Center(
-                      child: Image.asset("assets/images/splash/splash_icon.png"),
-                    ),
-                    Positioned(
-                      bottom: 30,
-                      child: Container(
-                        alignment: Alignment.bottomCenter,
-                        width: 400,
-                        child: CircularProgressIndicator(),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+          ?
+          // isUserFirstTime ? OnBoardingPage() : HomePage()
+          OnBoardingPage()
+          : SplashScreen(),
     );
   }
 }

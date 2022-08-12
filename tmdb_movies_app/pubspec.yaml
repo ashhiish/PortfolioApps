@@ -34,6 +34,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  introduction_screen: ^3.0.2
 
 dev_dependencies:
   flutter_test:
@@ -48,7 +49,10 @@ dev_dependencies:
   flutter_lints: ^1.0.0
 
 flutter_native_splash:
-  color: "#e8e3e3"
+  # this should be some lighter shade by i am theming my app dark fully
+  # will add multiple theme support later
+  #color: "#e8e3e3"
+  color: "#1a1a1a"
   image: assets/images/splash/splash_icon.png
   android: true
   ios: true
@@ -83,6 +87,7 @@ flutter:
     - assets/
     - assets/images/
     - assets/images/splash/
+    - assets/images/onboarding/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

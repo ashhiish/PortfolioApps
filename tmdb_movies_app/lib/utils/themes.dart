@@ -1,3 +1,17 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:flutter/material.dart';
+import 'package:tmdb_movies_app/utils/colors_manager.dart';
+
+ThemeData currentTheme = ThemeData.dark().copyWith(
+    backgroundColor: ColorManager.backgroundColorDark,
+    appBarTheme: AppBarTheme(
+      centerTitle: true,
+      backgroundColor: ColorManager.backgroundColorDark,
+      actionsIconTheme: IconThemeData(color: ColorManager.lightWhite, size: 30),
+    ),
+    pageTransitionsTheme: PageTransitionsTheme());
+
 // ThemeData theme1Light = ThemeData(
 //     // main colors of the app
 //     primaryColor: ColorManager.lightPrimary,
